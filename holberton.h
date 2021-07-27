@@ -29,7 +29,6 @@ int print_S(va_list S);
 int print_r(va_list r);
 int print_R(va_list R);
 
-str_print(const char *format, ...);
 
 
 #endif /* HOLBERTON_H*/
