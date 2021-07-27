@@ -2,10 +2,6 @@
 #define HOLBERTON_H_
 #include <stdarg.h>
 
-<<<<<<< HEAD
-#define stdout 1
-=======
->>>>>>> 1d7b5d30a5fa22cb7014b80a0399cd0e89f1e114
 /**
  * struct fmt_struct - format-type class/object/struct
  * @fmt_identifier: format identifier
