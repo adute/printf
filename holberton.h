@@ -1,35 +1,31 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
-
 #include <stdarg.h>
+
 /**
- * struct print - structure for printing various types
- * @t: type to print
- * @f: function to print
+ * struct fmt_struct - format-type class/object/struct
+ * @fmt_identifier: format identifier
+ * @fmt_print_func: pointer to function that prints in the format of @format
  */
-typedef struct print
+
+struct fmt_struct
 {
-	char *t;
-	int (*f)(va_list);
-} print_t;
+	char fmt_identifier;
+	int (*fmt_print_func)(va_list *arg_list);
+};
+
+typedef struct fmt_struct fmt_struct_data_type;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int print_c(va_list c);
-int print_s(va_list s);
-int print_i(va_list i);
-int print_d(va_list d);
-int print_u(va_list u);
-int print_b(va_list b);
-int print_o(va_list o);
-int print_x(va_list x);
-int print_X(va_list X);
-int print_p(va_list p);
-int print_S(va_list S);
-int print_r(va_list r);
-int print_R(va_list R);
 
+int (*get_fmt_func(char identifier))(va_list *);
 
-
-#endif /* HOLBERTON_H*/
-
+int print_char(va_list *arg);
+int print_percentage_and_char(char c);
+int print_int(va_list *arg_list);
+/* int print_float(va_list *arg); */
+int print_string(va_list *arg);
+int print_normal_char(char c);
+int print_percentage(va_list *arg);
+#endif 
