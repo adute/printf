@@ -29,4 +29,5 @@ int print_string(va_list *arg);
 int print_normal_char(char c);
 int print_percentage(va_list *arg);
 int print_bin(va_list arg);
+int _pow_recursion(int x, int y);
 #endif

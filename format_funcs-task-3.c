@@ -9,16 +9,17 @@
  */
 int print_bin(va_list arg)
 {
-	unsigned int num, *b;
-	int i;
+	unsigned int num, b, rem, c;
+	int x;
 
-	num = va_arg(arg, int);
-	while (num > 0)
+	num = va_arg(arg, unsigned int);
+	while (num != 0)
 	{
-		b[i] = num % 2;
+		rem = num % 2;
+		c = _pow_recursion(10, x);
+		b += rem * c;
 		num = num / 2;
-		i++;
+		x++;
 	}
-	for (j = i - 1; j >= 0; j--)
-	return (b[j]);
+	return (b);
 }
