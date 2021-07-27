@@ -28,4 +28,4 @@ int print_int(va_list *arg_list);
 int print_string(va_list *arg);
 int print_normal_char(char c);
 int print_percentage(va_list *arg);
-#endif 
+#endif
