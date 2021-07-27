@@ -2,6 +2,8 @@
 #define HOLBERTON_H
 
 #include <stdarg.h>
+
+#define stdout 1
 /**
  * struct print - structure for printing various types
  * @t: type to print
