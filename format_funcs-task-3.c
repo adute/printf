@@ -9,13 +9,13 @@
  */
 int print_bin(va_list arg)
 {
-	int num, b;
-       
+	unsigned int num, b;
+
 	num = va_arg(arg, int);
-	 while (num != 0)
-	 {
-		 b = num % 2;
-		 num = num / 2;
-	 }
-	 return (b);
+	while (num != 0)
+	{
+		b = num % 2;
+		num = num / 2;
+	}
+	return (b);
 }
