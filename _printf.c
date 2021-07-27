@@ -10,24 +10,28 @@
  */
 int _printf(const char *format, ...)
 {
-	char *str;
+	char *s, c;
 	va_list arg;
 	int r;
-
+	
 	va_start(arg, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	{
 		return (-1);
 	}
-	while (*str != '\0')
+	while (*format)
 	{
-		switch (*str)
+		switch (*format++)
 		{
 			case 's':
-				str = va_arg(arg, char *);
-				r = write(1, format, sizeof(str));
+				s = va_arg(arg, char *);
+				r = write(stdout, format, sizeof(s));
+				break;
+			case 'c':
+				c = (char)va_arg(arg, int);
+				r = write(stdout, &c, 1);
+				break;
 		}
-		str++;
 	}
 	va_end(arg);
 	return (r);
